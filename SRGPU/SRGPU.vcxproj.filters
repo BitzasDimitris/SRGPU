@@ -8,15 +8,48 @@
       <UniqueIdentifier>a784cd1a-6774-4e9b-bd15-00192733e66c</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{3941d82d-42f0-455b-9e29-56013760a9b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Headers">
+      <UniqueIdentifier>{87e32648-aebe-449c-8c01-f10ab27ab213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Sources">
+      <UniqueIdentifier>{ffdfc52c-00c1-4b3e-9df8-2f552fb2deeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIHelpers">
+      <UniqueIdentifier>{c8b48535-2345-483b-9a0f-3784a89554dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIHelpers\Headers">
+      <UniqueIdentifier>{9093d43f-50fc-4e9a-9eef-f640432bab43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIHelpers\Sources">
+      <UniqueIdentifier>{9f3d1525-aeff-4fbc-b0de-0f75aaed3285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIHelpers\Interfaces">
+      <UniqueIdentifier>{f0d0763c-6e69-4bad-8ec1-b2d818b834cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Profile.cpp">
+      <Filter>Engine\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Profiles.cpp">
+      <Filter>UIHelpers\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Profile.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Profiles.h">
+      <Filter>UIHelpers\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">

@@ -6,6 +6,7 @@
 #pragma once
 
 #include "MainPage.g.h"
+#include <Profiles.h>
 
 namespace SRGPU
 {
@@ -17,5 +18,16 @@ namespace SRGPU
 	public:
 		MainPage();
 
+		
+
+
+	private:
+		Profiles profiles;
+
+
+		bool LoadResources();
+		void OnAddProfileButton(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void ShowErrorDialog(std::string error);
+		Platform::String^ stringToPlatformString(const std::string& input);
 	};
 }

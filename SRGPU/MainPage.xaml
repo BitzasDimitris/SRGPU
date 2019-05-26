@@ -8,7 +8,51 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid MinWidth="1280" MinHeight=" 840">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel x:Name="profilePanel" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BorderThickness="0,0,1.5,0" BorderBrush="White" MinWidth="400">
+            <TextBlock x:Name="profileTitle" Text="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0" Height="64" Width="589" FontFamily="Arial Black" FontSize="48" FontWeight="Normal" FontStyle="Normal" />
+            <ScrollViewer x:Name="profileScrollViewer" VerticalScrollBarVisibility="Auto" RelativePanel.Below="profileTitle" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Background="#FF212121" FontSize="72" FontFamily="Arial" FontWeight="Bold" >
+                <ListView x:Name="profileListView" SelectionMode="Single">
+                    <!--<ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Padding="5,0,5,0"
+                                Text="{Binding FirstName}" />
+                            <TextBlock Text="{Binding LastName}" />
+                            <TextBlock Text=", " />
+                            <TextBlock Text="{Binding Address}" />
+                        </StackPanel>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>-->
+                    <Button x:Name="addProfileButton" Content="Add Profile" Margin="5,5,5,5" FontSize="72" FontFamily="Arial" FontWeight="Normal" Click="OnAddProfileButton" Height="180" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 
+                </ListView>
+
+            </ScrollViewer>
+        </RelativePanel>
+
+        <RelativePanel x:Name="trainingPanel" Grid.Row="0" Grid.Column="1" BorderThickness="1.5,0,0,1.5" BorderBrush="White" MinWidth="680" MinHeight="280">
+            <TextBlock x:Name="trainingTitle" Text="Training" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0" Height="64" Width="1320" FontFamily="Arial Black" FontSize="48" FontWeight="Normal" FontStyle="Normal" />
+
+        </RelativePanel>
+
+        <RelativePanel x:Name="modelPanel" Grid.Row="1" Grid.Column="1" BorderThickness="1.5,1.5,0,1.5" BorderBrush="White" MinWidth="500" MinHeight="280">
+            <TextBlock x:Name="modelTitle" Text="Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0" Height="64" Width="1320" FontFamily="Arial Black" FontSize="48" FontWeight="Normal" FontStyle="Normal" />
+
+        </RelativePanel>
+
+        <RelativePanel x:Name="settingsPanel" Grid.Row="2" Grid.Column="1" BorderThickness="1.5,1.5,0,0" BorderBrush="White" MinWidth="500" MinHeight="280">
+            <TextBlock x:Name="settingsTitle" Text="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0" Height="64" Width="1320" FontFamily="Arial Black" FontSize="48" FontWeight="Normal" FontStyle="Normal" />
+
+        </RelativePanel>
     </Grid>
 </Page>
