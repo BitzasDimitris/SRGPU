@@ -220,6 +220,11 @@
     <ClCompile Include="Profile.cpp" />
     <ClCompile Include="Profiles.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ViewModel\MainViewModel.cs" />
+    <None Include="ViewModel\ViewModelLocator.cs" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

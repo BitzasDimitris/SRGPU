@@ -29,6 +29,9 @@
     <Filter Include="UIHelpers\Interfaces">
       <UniqueIdentifier>{f0d0763c-6e69-4bad-8ec1-b2d818b834cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ViewModel">
+      <UniqueIdentifier>{4690feba-5c64-4709-b75f-f0243b1909ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -79,5 +82,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ViewModel\ViewModelLocator.cs">
+      <Filter>ViewModel</Filter>
+    </None>
+    <None Include="ViewModel\MainViewModel.cs">
+      <Filter>ViewModel</Filter>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
